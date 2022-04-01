@@ -3,7 +3,10 @@ const inquirer = require('inquirer')
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
+const promptUser = readmeData => {
+    if(!readmeData.input) {
+        readmeData.input = []
+    }
     return inquirer.prompt([
         {
             type: 'input',
