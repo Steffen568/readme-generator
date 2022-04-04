@@ -57,6 +57,12 @@ const questions = [
         name: 'contributors',
         message: 'Please list any contributors to the project'
     },
+    {
+        type: 'checkbox',
+        name: 'licenses',
+        message: 'What licenses were used in this project?',
+        choices: ['IBM', 'MIT', 'Eclipse', 'Mozilla', 'Perl']
+    }
 ]
 
 const init = () => {
