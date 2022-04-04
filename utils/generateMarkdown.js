@@ -42,7 +42,7 @@ function generateMarkdown(data) {
   ## Contributors: 
   ${data.contributors}
 
-  ##Questions:
+  ## Questions:
   - [Link to Github Profile](${data.github})
   - [Please Contact My Email For Questions](${data.email})
 `;
