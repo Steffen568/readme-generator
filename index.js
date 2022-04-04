@@ -33,28 +33,13 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'link',
-        message: 'Please link the deployed application.'
+        name: 'email',
+        message: 'Please link your email adress.'
     },
     {
         type: 'input',
-        name: 'motivation',
-        message: 'What was your motivation for this project?'
-    },
-    {
-        type: 'input',
-        name: 'purpose',
-        message: 'What is the purpose of your project'
-    },
-    {
-        type: 'input',
-        name: 'problem',
-        message: 'What problem does you project solve?'
-    },
-    {
-        type: 'input',
-        name: 'learned',
-        message: 'What did you learn?'
+        name: 'github',
+        message: 'Please type your github username'
     },
     {
         type: 'checkbox',
@@ -74,11 +59,12 @@ const questions = [
     },
 ]
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const init = () => {
+    inquirer.prompt(questions).then((data) => {
+        console.log(data)
+        fs.writeFile('GeneratedREADME.md', generateMarkdown(data), (err) => err ? console.log('ERROR!') : console.log('README has been generated!'))
+    })
+}
 
-// TODO: Create a function to initialize app
-function init() {}
 
-// Function call to initialize app
 init();
