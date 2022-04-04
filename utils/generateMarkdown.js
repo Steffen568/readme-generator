@@ -34,7 +34,7 @@ function generateMarkdown(data) {
   ${data.languages.join(', ')}
 
   ## Licenses
-  ${data.licenses}
+  ${data.licenses.join(', ')}
 
   ## Instalation Instuctions: 
   ${data.installation}
