@@ -1,5 +1,5 @@
 
-  # reade me
+  # fsdfsf
 
   ## Table of Contents
   1. [Contact Me](#Questions)
@@ -9,17 +9,17 @@
   5. [Contributors](#contributors)
 
   ## Description:
-  dreame gen 
+  dsffs 
 
   ## Languages Used in App
-  JavaScript
+  JavaScript, HTML, CSS, ES6
 
   ## Instalation Instuctions: 
-   
+  sdfsdff
 
   ## Contributors: 
-   me
+  sdfsdfsf
 
   ##Questions:
-  - [Link to Github Profile](steffen568)
-  - [Please Contact My Email For Questions](sgonzalez.gmail)
+  - [Link to Github Profile](dfsdfs)
+  - [Please Contact My Email For Questions](sdfsfsf)
