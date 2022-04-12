@@ -4,7 +4,8 @@ const fs = require('fs')
 const { generateMarkdown, generateLicenseBadge } = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
-const questions = [
+const initQuestions = () => {
+    inquirer.prompt([
     {
         type: 'input',
         name: 'name',
@@ -63,14 +64,20 @@ const questions = [
         message: 'What licenses were used in this project?',
         choices: ['IBM', 'MIT', 'Eclipse', 'Mozilla', 'Perl']
     }
-]
-
-const init = () => {
-    inquirer.prompt(questions).then((data) => {
-        console.log(data)
-        fs.writeFile('README.md', generateMarkdown(data), (err) => err ? console.log('ERROR!') : console.log('README has been generated!'))
-    })
+        
+    ]).then(data => {
+            console.log(data)
+            generateREADME(generateMarkdown(data))
+        })
+    
+    const generateREADME = fileContent => {
+        fs.writeFile('README.md', fileContent,  (err) => err ? console.log('ERROR!') : console.log('README has been generated!'))
+    }
 }
 
 
-init();
+
+
+
+
+initQuestions()
