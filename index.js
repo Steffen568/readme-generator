@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
 const fs = require('fs')
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const { generateMarkdown, generateLicenseBadge } = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -68,7 +68,7 @@ const questions = [
 const init = () => {
     inquirer.prompt(questions).then((data) => {
         console.log(data)
-        fs.writeFile('GeneratedREADME.md', generateMarkdown(data), (err) => err ? console.log('ERROR!') : console.log('README has been generated!'))
+        fs.writeFile('README.md', generateMarkdown(data), (err) => err ? console.log('ERROR!') : console.log('README has been generated!'))
     })
 }
 
